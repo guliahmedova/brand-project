@@ -564,7 +564,7 @@ section {
 }
 .home .mobile-deals-offers .cards .card {
   flex: 0 0 20%;
-  padding: 15.4px 33.2px;
+  padding: 15.4px 33.2px 18px 33.2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -907,15 +907,17 @@ section {
 @media only screen and (max-width: 902px) {
   .home .mobile-deals-offers .cards .card {
     flex: 0 0 20%;
+    position: relative;
+    height: auto;
   }
   .home .mobile-deals-offers .cards .card h4 {
     text-align: center;
-    width: 100%;
-    word-wrap: wrap;
-    flex: 0 0 auto;
+    margin-bottom: 8px;
+    white-space: nowrap;
   }
   .home .mobile-deals-offers .cards .card span {
-    background-color: red;
+    padding: 5px 13px 6px 13px;
+    width: auto;
   }
 }
 @media only screen and (max-width: 658px) {

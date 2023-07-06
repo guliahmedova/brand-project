@@ -11,6 +11,7 @@ import downIcon from '../../assets/images/down.svg';
 import recommendedItems from '../../assets/const/recommendedItems';
 import services from '../../assets/const/services';
 import regions from '../../assets/const/regions';
+import { useState, useEffect } from 'react';
 
 const section1Obj = {
   img: section1CardImg,
@@ -22,6 +23,19 @@ const section2Obj = {
 };
 
 const Home = () => {
+  const [witdh, setWitdh] = useState(window.innerWidth);
+  const updateDimensions = () => {
+    setWitdh(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateDimensions);
+    return () => {
+      window.removeEventListener('resize', updateDimensions);
+    }
+  }, []);
+
+
   const offersCard = offers.map(item => {
     return (
       <div className='card' key={item.id}>
@@ -103,14 +117,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* deals-offers */}
-      <section className="mobile-deals-offers">
+      <section className={`${witdh <= 1091 ? "mobile-deals-offers":"deals-offers"}`}>
         <div className="time">
           <div className='text'>
             <h4>Deals and offers</h4>
             <span>Hygiene equipments</span>
           </div>
-          <img src={mobileTime} alt="" />
+          <img src={witdh <= 1091 ? mobileTime : time} alt="" />
         </div>
         <div className="cards">
           {offersCard}
