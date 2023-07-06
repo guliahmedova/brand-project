@@ -1,9 +1,10 @@
 import avatar from '../../assets/images/Avatar.svg';
 import time from '../../assets/images/time.svg';
+import mobileTime from '../../assets/images/mobiletime.svg';
 import { offers } from '../../assets/const/offers';
 import HomeSecion from '../reusable/HomeSecion';
-import {section1} from '../../assets/const/reusable';
-import {section2} from '../../assets/const/reusable';
+import { section1 } from '../../assets/const/reusable';
+import { section2 } from '../../assets/const/reusable';
 import section1CardImg from '../../assets/images/resuableMainCardImage1.svg';
 import section2CardImg from '../../assets/images/resuableMainCardImage2.svg';
 import downIcon from '../../assets/images/down.svg';
@@ -102,16 +103,19 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className="deals-offers">
+      {/* deals-offers */}
+      <section className="mobile-deals-offers">
         <div className="time">
-          <h4>Deals and offers</h4>
-          <span>Hygiene equipments</span>
-          <img src={time} alt="" />
+          <div className='text'>
+            <h4>Deals and offers</h4>
+            <span>Hygiene equipments</span>
+          </div>
+          <img src={mobileTime} alt="" />
         </div>
         <div className="cards">
           {offersCard}
         </div>
-      </section> */}
+      </section>
 
       {/* <HomeSecion data={section1} sectionMainCardData={section1Obj} />
       <HomeSecion data={section2} sectionMainCardData={section2Obj} /> */}

@@ -127,14 +127,16 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            h4 {
-                margin: 0;
-                font-weight: 700;
-            }
-            span {
-                color: var(--gray-500);
+            .text {
                 margin-bottom: 18px;
-                font-size: 1.3rem;
+                h4 {
+                    margin: 0;
+                    font-weight: 700;
+                }
+                span {
+                    color: var(--gray-500);
+                    font-size: 1.3rem;
+                }
             }
         }
 
@@ -169,6 +171,64 @@
                     font-size: 1.2rem;
                     margin-top: 7px;
                     margin-bottom: 17px;
+                }
+            }
+        }
+    }
+
+    //responsive deals-offers
+    .mobile-deals-offers {
+        display: flex;
+        border-radius: 0;
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: white;
+        box-shadow: none;
+        .time {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--gray-400);
+            .text {
+                h4 {
+                    font-weight: 600;
+                    font-size: 1.7rem;
+                }
+                span {
+                    color: var(--gray-600);
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .cards {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+            .card {
+                flex: 0 0 20%;
+                padding: 15.4px 33.2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .img {
+                    width: 76.66px;
+                    height: 83.19px;
+                    margin-bottom: 11.4px;
+                }
+                h4 {
+                    margin-bottom: 8px;
+                }
+                span {
+                    color: #eb001b;
+                    background-color: #ffe3e3;
+                    padding: 4px 2%;
+                    border-radius: 15px;
+                    font-weight: 500;
+                    width: 100%;
+                    font-size: 1.2rem;
+                    text-align: center;
                 }
             }
         }
@@ -492,7 +552,7 @@
             background-color: transparent;
             padding: 0;
             margin: 0;
-            
+
             .hero-mage {
                 padding: 0;
                 border-radius: 0;
@@ -505,6 +565,64 @@
             }
             .hero-right-part {
                 display: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 902px) {
+    .home {
+        .mobile-deals-offers {
+            .cards {
+                .card {
+                    flex: 0 0 20%;
+                    h4 {
+                        text-align: center;
+                        width: 100%;
+                        word-wrap: wrap;
+                        flex: 0 0 auto;
+                    }
+                    span {
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 658px) {
+    .home {
+        .mobile-deals-offers {
+            .cards {
+                .card {
+                    flex: 0 0 140px;
+                    text-align: center;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 308px) {
+    .home {
+        .mobile-deals-offers {
+            .cards {
+                .card {
+                    flex: 0 0 140px;
+                    text-align: center;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .time {
+                flex-direction: column;
+                row-gap: 10px;
+                align-items: center;
+                img {
+                    width: 143px;
+                }
             }
         }
     }
