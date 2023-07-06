@@ -1,0 +1,95 @@
+.mobile-navbar {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 77%;
+        padding: 10px 0;
+
+        .top-same-style {
+            display: flex;
+            align-items: center;
+        }
+        .left-part {
+            column-gap: 18px;
+            .menu-btn {
+                background-color: transparent;
+            }
+            .logo {
+                width: 116px;
+                height: 36px;
+            }
+        }
+        .right-part {
+            column-gap: 20px;
+        }
+    }
+
+    .search-bar {
+        position: relative;
+        margin: 0 auto;
+        width: 77%;
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        input {
+            background-color: var(--gray-200);
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            width: 100%;
+            padding: 10px 0 10px 36px;
+            color: var(--gray-500);
+            font-size: 16px;
+            &::placeholder {
+                font-size: 16px;
+                color: var(--gray-500);
+            }
+        }
+        .search-icon {
+            position: absolute;
+            left: 10.98px;
+            top: 11.99px;
+        }
+    }
+
+    .mobile-navbar-links {
+        width: 77%;
+
+        display: flex;
+        margin: 0 auto;
+        overflow-x: auto;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 3px;
+        padding-bottom: 18px;
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background-color: var(--gray-200);
+            text-transform: capitalize;
+            padding: 9px;
+            border-radius: var(--border-radius);
+        }
+    }
+}
+
+@media only screen and (max-width: 1202px) {
+    .mobile-navbar {
+        .top {
+            width: 90%;
+        }
+        .search-bar {
+            width: 90%;
+        }
+        .mobile-navbar-links {
+            width: 90%;
+        }
+    }
+}
