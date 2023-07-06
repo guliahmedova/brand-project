@@ -394,6 +394,7 @@ section {
   background-image: url("../images/hero.svg");
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
   background-size: cover;
   max-width: 100%;
   min-height: 360px;
@@ -712,7 +713,6 @@ section {
   justify-content: space-between;
   margin-top: 20px;
   max-height: auto;
-  max-width: 100%;
 }
 .home .form-section .content {
   padding-top: 40px;
