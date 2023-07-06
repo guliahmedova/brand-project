@@ -13,7 +13,7 @@ const Layout = () => {
     useEffect(() => {
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
-    }, []);
+    }, [width]);
 
     return (
         <>

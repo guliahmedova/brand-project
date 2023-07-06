@@ -12,6 +12,7 @@ import recommendedItems from '../../assets/const/recommendedItems';
 import services from '../../assets/const/services';
 import regions from '../../assets/const/regions';
 import { useState, useEffect } from 'react';
+import MobileHomeSection from '../reusable/MobileHomeSection';
 
 const section1Obj = {
   img: section1CardImg,
@@ -33,7 +34,7 @@ const Home = () => {
     return () => {
       window.removeEventListener('resize', updateDimensions);
     }
-  }, []);
+  }, [witdh]);
 
 
   const offersCard = offers.map(item => {
@@ -117,21 +118,32 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={`${witdh <= 1091 ? "mobile-deals-offers":"deals-offers"}`}>
+      <section className={`${witdh <= 1202 ? "mobile-deals-offers" : "deals-offers"}`}>
         <div className="time">
           <div className='text'>
             <h4>Deals and offers</h4>
             <span>Hygiene equipments</span>
           </div>
-          <img src={witdh <= 1091 ? mobileTime : time} alt="" />
+          <img src={witdh <= 1202 ? mobileTime : time} alt="" />
         </div>
         <div className="cards">
           {offersCard}
         </div>
       </section>
 
-      {/* <HomeSecion data={section1} sectionMainCardData={section1Obj} />
-      <HomeSecion data={section2} sectionMainCardData={section2Obj} /> */}
+      {
+        witdh <= 1202 ? (
+          <>
+            <MobileHomeSection data={section1} />
+            <MobileHomeSection data={section2} />
+          </>
+        ) : (
+          <>
+            <HomeSecion data={section1} sectionMainCardData={section1Obj} />
+            <HomeSecion data={section2} sectionMainCardData={section2Obj} />
+          </>
+        )
+      }
 
       {/* <section className='form-section'>
         <div className="content">
