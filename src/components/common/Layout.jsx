@@ -21,9 +21,7 @@ const Layout = () => {
                 width <= 1120 ? <MobileNavbar /> : <Navbar />
             }
             <Outlet />
-            {
-                width <= 1120 ? "" : <Footer />
-            }
+            <Footer />
         </>
     )
 }
