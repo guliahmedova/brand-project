@@ -155,16 +155,16 @@
 }
 @media only screen and (max-width: 932px) {
     .footer {
-        .footer-card{
+        .footer-card {
             flex-direction: column;
         }
     }
 }
 @media only screen and (max-width: 573px) {
     .footer {
-        .footer-card{
+        .footer-card {
             flex-direction: column;
-            .mini-cards{
+            .mini-cards {
                 flex-direction: column;
             }
         }
@@ -173,6 +173,11 @@
 @media only screen and (max-width: 455px) {
     .footer {
         .subscribe-section {
+            p {
+                word-wrap: break-word;
+                text-align: center;
+                font-size: 1rem;
+            }
             form {
                 width: 92%;
                 margin: 0 auto;
