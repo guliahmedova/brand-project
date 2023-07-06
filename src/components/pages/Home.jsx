@@ -145,10 +145,11 @@ const Home = () => {
         )
       }
 
-      {/* <section className='form-section'>
+      <section className='form-section'>
         <div className="content">
           <h1>An easy way to send <br /> requests to all suppliers</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing <br /> elit, sed do eiusmod tempor incididunt.</p>
+          <button className='mobile-btn custom-btn'>Send inquiry</button>
         </div>
         <form>
           <h2>Send quote to suppliers</h2>
@@ -160,14 +161,14 @@ const Home = () => {
           </div>
           <button className='custom-btn'>Send inquiry</button>
         </form>
-      </section> */}
+      </section>
 
-      {/* <section className='recommended-items'>
+      <section className='recommended-items'>
         <h1 className='section-title'>Recommended items</h1>
         <div className="cards">
           {recommendedItemsCard}
         </div>
-      </section> */}
+      </section>
 
       {/* <section className='our-extra-services'>
         <h1 className='section-title'>Our extra services</h1>

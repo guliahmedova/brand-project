@@ -309,6 +309,7 @@
         background-color: white;
         border: 0;
         border-radius: 0;
+        margin-bottom: 10px;
         .mobile-sec-title {
             padding: 14px 16px;
             font-size: 1.8rem;
@@ -362,17 +363,17 @@
             url("/src/assets/images/homeFormBG.svg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-
+        background-size: 100% 100%;
         display: flex;
         justify-content: space-between;
-
         margin-top: 20px;
-        min-height: 420px;
-
+        max-height: 420px;
         .content {
             padding-top: 40px;
             padding-left: 40px;
+            .mobile-btn {
+                display: none;
+            }
             h1 {
                 color: var(--gray-100);
                 font-weight: 500;
@@ -393,7 +394,7 @@
             background-color: var(--gray-100);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            padding: 0 20px;
+            padding: 0 20px 25px 20px;
             h2 {
                 font-weight: 700;
                 padding: 22px 0 18px 0;
@@ -486,7 +487,7 @@
                 }
                 span {
                     color: var(--gray-500);
-                    width: 186px;
+                   max-width: 186px;
                     font-weight: 500;
                     font-size: 16px;
                     margin-top: 3.9px;
@@ -608,19 +609,86 @@
             background-color: transparent;
             padding: 0;
             margin: 0;
-
             .hero-mage {
                 padding: 0;
                 border-radius: 0;
                 width: 100%;
                 margin: 0;
+                min-height: 0;
                 background-position: center;
+                overflow-x: hidden;
+                .content {
+                    h2 {
+                        font-size: 22px;
+                    }
+                    h1 {
+                        font-size: 22px;
+                    }
+                }
             }
             .hero-list {
                 display: none;
             }
             .hero-right-part {
                 display: none;
+            }
+        }
+
+        .form-section {
+            flex-direction: column;
+            height: 100%;
+            background-size: 100% 100%;
+            padding-bottom: 34px;
+            .content {
+                h1 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    display: none;
+                }
+                .mobile-btn {
+                    display: block;
+                    padding: 7px 10px;
+                    border-radius: var(--border-radius);
+                    margin-top: 17px;
+                    height: auto;
+                }
+            }
+            form {
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+
+        .recommended-items {
+            width: 92%;
+            margin-left: auto;
+            margin-right: auto;
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1189px) {
+    .home {
+        .form-section {
+            border-radius: 0;
+            form {
+                display: none;
+            }
+        }
+        .recommended-items {
+            .cards {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+                span{
+                    width: auto ;
+                    line-height: 1.5em;
+                    height: 3em;
+                    overflow: hidden;
+                    width: 100%;
+                }
             }
         }
     }
@@ -645,6 +713,11 @@
                 }
             }
         }
+        .recommended-items {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     }
 }
 @media only screen and (max-width: 658px) {
@@ -664,6 +737,53 @@
             .mini-cards {
                 .card {
                     flex: 0 0 40%;
+                }
+            }
+        }
+        .recommended-items {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                .card {
+                    flex: 0 0 50%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 418px) {
+    .home{
+        .recommended-items{
+            .cards{
+                .card{
+                    span{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 397px) {
+    .home{
+        .recommended-items{
+            .cards{
+                .card{
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 377px) {
+    .home{
+        .recommended-items{
+            .cards{
+                .card{
+                    span{
+                        font-size: 13px;
+                    }
                 }
             }
         }
