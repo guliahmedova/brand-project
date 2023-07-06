@@ -858,13 +858,14 @@ section {
 .home .our-extra-services .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 20px;
+  gap: 20px;
 }
 .home .our-extra-services .cards .card .img {
   position: relative;
 }
-.home .our-extra-services .cards .card .img img {
+.home .our-extra-services .cards .card .img .card-image {
   filter: contrast(100%);
+  width: 100%;
 }
 .home .our-extra-services .cards .card .img .gradient {
   position: absolute;
@@ -886,14 +887,14 @@ section {
   background-color: var(--white);
   width: 55px;
   height: 55px;
-  top: 92px;
+  top: 80%;
+  right: 9%;
+  border: 2px solid white;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
-  right: 21px;
   cursor: pointer;
 }
 .home .regions-sec {
@@ -932,6 +933,7 @@ section {
 .home .regions-sec .cards .region-card .text h1 {
   font-size: 16px;
   font-weight: 400;
+  white-space: nowrap;
 }
 .home .regions-sec .cards .region-card .text p {
   color: var(--gray-500);
@@ -998,6 +1000,20 @@ section {
   .home .recommended-items .cards {
     grid-template-columns: repeat(4, 1fr);
   }
+  .home .our-extra-services {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .our-extra-services .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home .regions-sec {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
 }
 @media only screen and (max-width: 1189px) {
   .home .form-section {
@@ -1016,6 +1032,19 @@ section {
     height: 3em;
     overflow: hidden;
     width: 100%;
+  }
+  .home .our-extra-services {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .our-extra-services .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .our-extra-services .cards .card .img .icon {
+    top: 85%;
+    width: 60px;
+    height: 60px;
   }
 }
 @media only screen and (max-width: 902px) {
@@ -1036,6 +1065,27 @@ section {
   .home .recommended-items .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+  .home .regions-sec {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .regions-sec .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .home .regions-sec .cards .region-card {
+    flex: 0 0 auto;
+  }
+}
+@media only screen and (max-width: 703px) {
+  .home .regions-sec .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home .regions-sec .cards .region-card .text h1 {
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 658px) {
   .home .mobile-deals-offers .cards .card {
@@ -1053,6 +1103,19 @@ section {
   }
   .home .recommended-items .cards .card {
     flex: 0 0 50%;
+  }
+  .home .our-extra-services {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home .our-extra-services .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .home .our-extra-services .cards .card .img .icon {
+    top: 85%;
+    width: 60px;
+    height: 60px;
   }
 }
 @media only screen and (max-width: 418px) {

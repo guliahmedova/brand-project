@@ -62,7 +62,7 @@ const Home = () => {
       <div className="card" key={item.id}>
         <div className="img">
           <div className="gradient"></div>
-          <img src={item.img} alt="" />
+          <img src={item.img} alt="" className='card-image'/>
           <span className='icon'><img src={item.icon} alt="" /></span>
         </div>
         <p className='desc'>{item.text}</p>
@@ -170,19 +170,19 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className='our-extra-services'>
+      <section className='our-extra-services'>
         <h1 className='section-title'>Our extra services</h1>
         <div className="cards">
           {servicesCard}
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className='regions-sec'>
+      <section className='regions-sec'>
         <h1 className='section-title'>Suppliers by region</h1>
         <div className="cards">
           {regionsCard}
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }
