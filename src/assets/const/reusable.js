@@ -14,7 +14,6 @@ import computer from '../images/computer.svg';
 import camera from '../images/camera.svg';
 import headphones1 from '../images/headphones2.svg';
 import headphones2 from '../images/headphone.svg';
-import phone1 from '../images/phone1.svg';
 import phone2 from '../images/phones2.svg';
 import phone3 from '../images/phones3.svg';
 import bottle from '../images/waterbottle.svg';

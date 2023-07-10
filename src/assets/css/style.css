@@ -1409,3 +1409,342 @@ section {
     flex: 0 0 auto;
   }
 }
+.categories {
+  width: 100%;
+  height: auto;
+}
+.categories .categories-top-links {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.categories .categories-top-links img {
+  margin-right: 6px;
+}
+.categories .categories-top-links a {
+  text-decoration: none;
+  color: var(--gray-500);
+}
+.categories .catogories-content {
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 28px;
+}
+.categories .catogories-content .sidebar .sidebar-card {
+  border-top: 1px solid var(--gray-300);
+  padding-bottom: 26px;
+}
+.categories .catogories-content .sidebar .sidebar-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 14px 0;
+  font-weight: 700;
+}
+.categories .catogories-content .sidebar .sidebar-card h3 img {
+  width: 10px;
+}
+.categories .catogories-content .sidebar .sidebar-card ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.categories .catogories-content .sidebar .sidebar-card ul li {
+  color: var(--gray-600);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.categories .catogories-content .sidebar .sidebar-card .link-btn {
+  text-decoration: none;
+  font-weight: 500;
+  margin: 9px 0 0 0;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.categories .catogories-content .sidebar .checkbox-card ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.categories .catogories-content .sidebar .condition ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+.categories .catogories-content .sidebar .price-card {
+  padding-bottom: 20px;
+}
+.categories .catogories-content .sidebar .price-card .range {
+  margin-top: 23px;
+}
+.categories .catogories-content .sidebar .price-card .range .range-slider {
+  height: 4px;
+  position: relative;
+  background-color: #afd0ff;
+  border-radius: 2px;
+}
+.categories .catogories-content .sidebar .price-card .range .range-slider .range-selected {
+  height: 100%;
+  left: 30%;
+  right: 30%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #0d6efd;
+}
+.categories .catogories-content .sidebar .price-card .range .range-input {
+  position: relative;
+}
+.categories .catogories-content .sidebar .price-card .range .range-input input {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.categories .catogories-content .sidebar .price-card .range .range-input input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #afd0ff;
+  background-color: #fff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+.categories .catogories-content .sidebar .price-card .range .range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #afd0ff;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+.categories .catogories-content .sidebar .price-card .range .range-price {
+  margin: 30px 0 8px 0;
+  width: 100%;
+  display: flex;
+  column-gap: 9px;
+}
+.categories .catogories-content .sidebar .price-card .range .range-price .form-group label {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.categories .catogories-content .sidebar .price-card .range .range-price .form-group input {
+  width: 110px;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: var(--gray-400);
+}
+.categories .catogories-content .sidebar .price-card .range .apply-btn {
+  background-color: white;
+  margin: 0 auto;
+  color: var(--primary);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  display: block;
+  padding: 10.5px 16px;
+  box-shadow: var(--box-shadow);
+}
+.categories .main {
+  width: 100%;
+}
+.categories .main .main-top {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 11px 10px;
+}
+.categories .main .main-top .left-side {
+  font-size: 1.3rem;
+}
+.categories .main .main-top .right-side {
+  display: flex;
+  align-items: center;
+}
+.categories .main .main-top .right-side .vertf {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  font-size: 16px;
+  margin-right: 17px;
+}
+.categories .main .main-top .right-side .vertf input {
+  width: 17px;
+  height: 17px;
+}
+.categories .main .main-top .right-side .select-features {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 10px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  width: 172px;
+  margin-right: 10px;
+}
+.categories .main .main-top .right-side .btns {
+  display: flex;
+  align-items: center;
+}
+.categories .main .main-top .right-side .btns button {
+  background-color: transparent;
+  border: 1px solid var(--gray-300);
+}
+.categories .main .main-top .right-side .btns .first {
+  padding: 11px 10px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+.categories .main .main-top .right-side .btns .second {
+  padding: 12px 10px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.categories .main .main-top .right-side .btns .active {
+  background-color: var(--gray-200);
+}
+.categories .main .main-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.categories .main .main-cards .card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 210px auto;
+  padding: 18px;
+}
+.categories .main .main-cards .card .card-img {
+  width: 180px;
+  height: 180px;
+}
+.categories .main .main-cards .card .content .img-fav {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.categories .main .main-cards .card .content .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categories .main .main-cards .card .content .price {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.categories .main .main-cards .card .content .discount {
+  color: var(--gray-500);
+  text-decoration: line-through;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.categories .main .main-cards .card .content .rating-menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  column-gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.categories .main .main-cards .card .content .rating-menu .rate-score {
+  color: var(--orange);
+}
+.categories .main .main-cards .card .content .rating-menu .order {
+  color: var(--gray-500);
+}
+.categories .main .main-cards .card .content .rating-menu .free {
+  color: var(--green);
+}
+.categories .main .main-cards .card .content .desc {
+  color: var(--gray-600);
+  font-size: 1.4rem;
+  width: 450px;
+  font-weight: 400;
+}
+.categories .main .main-cards .card .content .view-details {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.categories .main .main-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.categories .main .main-grid-cards .card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 28px 0 18px 0;
+}
+.categories .main .main-grid-cards .card .card-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.categories .main .main-grid-cards .card .content {
+  border-top: 1px solid var(--gray-200);
+}
+.categories .main .main-grid-cards .card .content .content-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 20px 13px 20px;
+}
+.categories .main .main-grid-cards .card .content .content-title .left {
+  display: flex;
+  flex-direction: column;
+}
+.categories .main .main-grid-cards .card .content .content-title .left .price {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+.categories .main .main-grid-cards .card .content .content-title .left .discount {
+  color: var(--gray-500);
+  text-decoration: line-through;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.categories .main .main-grid-cards .card .content .content-title .left .rating-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.categories .main .main-grid-cards .card .content .content-title .left .rating-menu .rate-score {
+  color: var(--orange);
+}
+.categories .main .main-grid-cards .card .content .title {
+  font-size: 1.4rem;
+  padding: 0 20px;
+  color: var(--gray-600);
+  width: 215px;
+  font-weight: 500;
+}

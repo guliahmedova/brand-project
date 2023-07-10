@@ -6,12 +6,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Layout from './components/common/Layout.jsx';
 import Home from './components/pages/Home.jsx';
-import Category from './components/pages/Category';
+import Categories from './components/pages/Categories';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
     <Route index element={<Home />} />
-    <Route path='category' element={<Category />} />
+    <Route path='categories' element={<Categories />} />
   </Route>
 ));
 

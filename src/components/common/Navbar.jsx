@@ -42,7 +42,7 @@ const Navbar = () => {
 
       <section className="bottom-navbar">
         <nav className="nav-links">
-          <Link to="/category" className='d-flex align-items-center column-gap-3'>
+          <Link to="/categories" className='d-flex align-items-center column-gap-3'>
             <img src={navMenu} alt="" /> All category
           </Link>
           <Link>Hot offers</Link>
