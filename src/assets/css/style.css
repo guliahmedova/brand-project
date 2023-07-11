@@ -1435,9 +1435,11 @@ section {
   justify-content: space-between;
   column-gap: 28px;
 }
+.categories .catogories-content .sidebar {
+  width: 25%;
+}
 .categories .catogories-content .sidebar .sidebar-card {
   border-top: 1px solid var(--gray-300);
-  padding-bottom: 26px;
 }
 .categories .catogories-content .sidebar .sidebar-card h3 {
   display: flex;
@@ -1455,7 +1457,7 @@ section {
   flex-direction: column;
   row-gap: 10px;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 .categories .catogories-content .sidebar .sidebar-card ul li {
   color: var(--gray-600);
@@ -1468,19 +1470,20 @@ section {
   margin: 9px 0 0 0;
   font-size: 1.2rem;
   display: inline-block;
+  padding-bottom: 20px;
 }
 .categories .catogories-content .sidebar .checkbox-card ul li {
   display: flex;
   align-items: center;
   column-gap: 13px;
 }
+.categories .catogories-content .sidebar .condition ul {
+  padding-bottom: 20px;
+}
 .categories .catogories-content .sidebar .condition ul li {
   display: flex;
   align-items: center;
   column-gap: 13px;
-}
-.categories .catogories-content .sidebar .price-card {
-  padding-bottom: 20px;
 }
 .categories .catogories-content .sidebar .price-card .range {
   margin-top: 23px;
@@ -1558,6 +1561,7 @@ section {
   display: block;
   padding: 10.5px 16px;
   box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
 }
 .categories .main {
   width: 100%;
@@ -1747,4 +1751,86 @@ section {
   color: var(--gray-600);
   width: 215px;
   font-weight: 500;
+}
+.categories .main .tags {
+  display: flex;
+  align-items: baseline;
+  column-gap: 18px;
+}
+.categories .main .tags .tag-menu {
+  display: flex;
+  align-items: baseline;
+  padding: 0;
+  margin: 0 0 20px 0;
+  column-gap: 8px;
+}
+.categories .main .tags .tag-menu li {
+  color: var(--gray-600);
+  font-size: 1.5rem;
+  padding: 6.5px 10px;
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  background-color: white;
+  user-select: none;
+}
+.categories .main .tags .tag-menu li img {
+  cursor: pointer;
+}
+.categories .main .tags .clear-filter {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+}
+.categories .pagenation {
+  box-shadow: none;
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+  margin-bottom: 43px;
+  align-items: center;
+  column-gap: 9px;
+}
+.categories .pagenation .pagenation-menu {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(5, 1fr);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+.categories .pagenation .pagenation-menu .item {
+  background: white;
+  font-size: 1.5rem;
+  padding: 13px 19px;
+  display: flex;
+  border: 1px solid var(--gray-200);
+  cursor: pointer;
+}
+.categories .pagenation .pagenation-menu .prev {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+.categories .pagenation .pagenation-menu .next {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.categories .pagenation .pagenation-menu .active {
+  background-color: var(--gray-200);
+}
+.categories .pagenation .select-page-size {
+  padding: 13px 17px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  font-size: 1.5rem;
+  column-gap: 19px;
+  cursor: pointer;
 }
