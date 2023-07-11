@@ -17,7 +17,8 @@ import pagerightgray from '../../assets/images/pagerightgray.svg';
 import pageleftgray from '../../assets/images/pageleftgray.svg';
 import pagerightblack from '../../assets/images/pagerightblack.svg';
 import pageleftblack from '../../assets/images/pageleftblack.svg';
-
+import sort from '../../assets/images/sort.svg';
+import filter from '../../assets/images/filter.svg';
 import deletetagicon from '../../assets/images/deletetag.svg';
 
 const ratings = [
@@ -37,22 +38,26 @@ const Categories = () => {
 
     const categoriesCard_menu = categories.map(item => {
         return (
-            <div className='card' key={item.id}>
-                <img src={item.img} alt="" className='card-img' />
-                <div className="content">
-                    <h3 className='title'>{item.title} <img src={favorite} className='img-fav' alt="" /></h3>
-                    <span className='price'>{item.price}</span>
-                    <span className='discount'>{item.discount}</span>
-                    <div className='rating-menu'>
-                        <img src={rating} alt="" /> <span className="rate-score">7.5</span>
-                        <img src={dot} alt="" />
-                        <span className='order'>154 orders</span>
-                        <img src={dot} alt="" />
-                        <span className='free'>Free Shipping</span>
+            <div className='custom-card' key={item.id}>
+                <div className="left">
+                    <img src={item.img} alt="" className='card-img' />
+                    <div className="content">
+                        <h3 className='title'>{item.title} </h3>
+                        <span className='price'>{item.price}</span>
+                        <span className='discount'>{item.discount}</span>
+                        <div className='rating-menu'>
+                            <img src={rating} alt="" /> <span className="rate-score">7.5</span>
+                            <img src={dot} alt="" />
+                            <span className='order'>154 orders</span>
+                            <img src={dot} alt=""  className='second-dot'/> <br />
+                            <span className='free'>Free Shipping</span>
+                        </div>
+                        <span className='mobile-free'>Free Shipping</span>
+                        <p className='desc'>{item.desc}</p>
+                        <a href="#" className='view-details'>View details</a>
                     </div>
-                    <p className='desc'>{item.desc}</p>
-                    <a href="#" className='view-details'>View details</a>
                 </div>
+                <img src={favorite} className='img-fav' alt="" />
             </div>
         )
     });
@@ -228,17 +233,35 @@ const Categories = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="tags">
-                        <ul className='tag-menu'>
-                            <li>Samsung <img src={deletetagicon} alt="" /></li>
-                            <li>Apple <img src={deletetagicon} alt="" /></li>
-                            <li>Poco <img src={deletetagicon} alt="" /></li>
-                            <li>Metallic <img src={deletetagicon} alt="" /></li>
-                            <li>4 star <img src={deletetagicon} alt="" /></li>
-                            <li>3 star <img src={deletetagicon} alt="" /></li>
-                        </ul>
-                        <button className='clear-filter'>Clear all filter</button>
+
+                    <div className="mobile-main-top">
+                        <div className="sort same-style">
+                            Sort: Newest <img src={sort} alt="" />
+                        </div>
+                        <div className="filter same-style">
+                            Filter (3) <img src={filter} alt="" />
+                        </div>
+                        <div className="btns">
+                            <button onClick={() => handleOnClick(1)} className={`first ${activeIndex === 1 && "active"}`}><img src={gridview} alt="" /></button>
+                            <button onClick={() => handleOnClick(2)} className={`second ${activeIndex === 2 && "active"}`}><img src={gridmenu} alt="" /></button>
+                        </div>
                     </div>
+
+                    {
+                        activeIndex === 1 && (
+                            <div className="tags">
+                                <ul className='tag-menu'>
+                                    <li>Samsung <img src={deletetagicon} alt="" /></li>
+                                    <li>Apple <img src={deletetagicon} alt="" /></li>
+                                    <li>Poco <img src={deletetagicon} alt="" /></li>
+                                    <li>Metallic <img src={deletetagicon} alt="" /></li>
+                                    <li>4 star <img src={deletetagicon} alt="" /></li>
+                                    <li>3 star <img src={deletetagicon} alt="" /></li>
+                                </ul>
+                                <button className='clear-filter'>Clear all filter</button>
+                            </div>
+                        )
+                    }
                     <div className={`${activeIndex === 1 ? "main-grid-cards" : "main-cards"}`}>
                         {activeIndex === 1 ? categoriesCard_grid : categoriesCard_menu}
                     </div>
