@@ -7,11 +7,13 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './components/common/Layout.jsx';
 import Home from './components/pages/Home.jsx';
 import Categories from './components/pages/Categories';
+import NotFound from './components/common/NotFound';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
     <Route index element={<Home />} />
     <Route path='categories' element={<Categories />} />
+    <Route path='notfound' element={<NotFound />} />
   </Route>
 ));
 

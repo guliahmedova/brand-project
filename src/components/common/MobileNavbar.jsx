@@ -59,22 +59,22 @@ const MobileNavbar = () => {
                                 <span className='text'>Sign in | Register</span>
                             </div>
                             <div className="first-menu sidebar-menu">
-                                <Link><img src={home} alt="" />Home</Link>
-                                <Link><img src={catg} alt="" />Categories</Link>
-                                <Link><img src={hrt} alt="" />Favorites</Link>
-                                <Link><img src={myorders} alt="" />My orders</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="/"><img src={home} alt="" />Home</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="categories"><img src={catg} alt="" />Categories</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={hrt} alt="" />Favorites</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={myorders} alt="" />My orders</Link>
                             </div>
                             <div className="line"></div>
                             <div className="second-menu sidebar-menu">
-                                <Link><img src={e} alt="" />English | USD</Link>
-                                <Link><img src={contactus} alt="" />Contact us</Link>
-                                <Link><img src={about} alt="" />About</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={e} alt="" />English | USD</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={contactus} alt="" />Contact us</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={about} alt="" />About</Link>
                             </div>
                             <div className="line"></div>
                             <div className='third-menu sidebar-menu'>
-                                <Link>User agreement</Link>
-                                <Link>Partnership</Link>
-                                <Link>Partnership</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">User agreement</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">Partnership</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">Partnership</Link>
                             </div>
                         </div>
                         <div className="blur"></div>
