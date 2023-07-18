@@ -8,7 +8,7 @@ import headphones1 from '../images/headphones2.svg';
 
 const categories = [
     {
-        id: nanoid(),
+        id: "1",
         img: phone3,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",
@@ -19,7 +19,7 @@ const categories = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     },
     {
-        id: nanoid(),
+        id: "2",
         img: phone2,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",
@@ -29,7 +29,7 @@ const categories = [
         shipping: "Free Shipping",
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     },   {
-        id: nanoid(),
+        id: "3",
         img: phone1,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",
@@ -40,7 +40,7 @@ const categories = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     },
     {
-        id: nanoid(),
+        id: "4",
         img: computer,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",
@@ -51,7 +51,7 @@ const categories = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     },
     {
-        id: nanoid(),
+        id: "5",
         img: watch,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",
@@ -62,7 +62,7 @@ const categories = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     },
     {
-        id: nanoid(),
+        id: "6",
         img: headphones1,
         title: "Canon Cmera EOS 2000, Black 10x zoom",
         price: "$998.00",

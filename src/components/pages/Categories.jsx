@@ -38,7 +38,7 @@ const Categories = () => {
 
     const categoriesCard_menu = categories.map(item => {
         return (
-            <div className='custom-card' key={item.id}>
+            <Link to={`/categories/${item.id}`} className='custom-card' key={item.id}>
                 <div className="left">
                     <img src={item.img} alt="" className='card-img' />
                     <div className="content">
@@ -54,17 +54,17 @@ const Categories = () => {
                         </div>
                         <span className='mobile-free'>Free Shipping</span>
                         <p className='desc'>{item.desc}</p>
-                        <a href="#" className='view-details'>View details</a>
+                        <button className='view-details'>View details</button>
                     </div>
                 </div>
                 <img src={favorite} className='img-fav' alt="" />
-            </div>
+            </Link>
         )
     });
 
     const categoriesCard_grid = categories.map(item => {
         return (
-            <div className='card' key={item.id}>
+            <Link to={`/categories/${item.id}`} className='card' key={item.id}>
                 <img src={item.img} alt="" className='card-img' />
                 <div className="content">
                     <div className="content-title">
@@ -79,7 +79,7 @@ const Categories = () => {
                     </div>
                     <p className='title'>{item.title}</p>
                 </div>
-            </div>
+            </Link>
         )
     });
 
