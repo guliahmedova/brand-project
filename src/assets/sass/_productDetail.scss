@@ -1,0 +1,217 @@
+.product-detail {
+    width: 100%;
+    height: auto;
+    .categories-top-links {
+        display: flex;
+        align-items: center;
+        margin: 20px auto;
+        box-shadow: none;
+        font-size: 16px;
+        column-gap: 3px;
+        a {
+            text-decoration: none;
+            color: var(--gray-500);
+        }
+    }
+    .detail-content {
+        background-color: white;
+        border-radius: var(--border-radius);
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        .image-side {
+            padding: 20px 0 0 19px;
+            .main-img {
+                background-color: transparent;
+                width: 380px;
+                height: 380px;
+                border-radius: var(--border-radius);
+                border: solid 1px var(--gray-300);
+                margin-bottom: 20px;
+            }
+            .small-imgs {
+                display: flex;
+                column-gap: 9.15px;
+                .active {
+                    border: solid 1px var(--gray-600);
+                }
+                img {
+                    width: 56px;
+                    border: solid 1px var(--gray-300);
+                    border-radius: var(--border-radius);
+                    height: 56px;
+                }
+            }
+        }
+        .middle-part {
+            width: 430px;
+            padding: 22px 0 44px 0;
+            .stock {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                column-gap: 7px;
+                color: #00b517;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            .product-title {
+                color: var(--dark);
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 9px;
+            }
+            .rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 11px;
+                .stars {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    color: var(--orange);
+                    .star-text {
+                        margin-left: 8px;
+                    }
+                    .star {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                .dot {
+                    margin-left: 8px;
+                    margin-right: 10px;
+                }
+                .reviews {
+                    display: flex;
+                    align-items: center;
+                    color: var(--gray-500);
+                    font-size: 14px;
+                    line-height: 0;
+                    column-gap: 9px;
+                    text-align: center;
+                }
+                .sold {
+                    display: flex;
+                    align-items: center;
+                    color: var(--gray-500);
+                    font-size: 14px;
+                    line-height: 0;
+                    column-gap: 9px;
+                    text-align: center;
+                }
+            }
+            .price-range {
+                display: flex;
+                align-items: center;
+                background-color: #fff0df;
+                padding: 16px;
+                border-radius: 1px;
+                margin-bottom: 21px;
+                .first {
+                    border-right: 1px solid #bdc1c8;
+                    margin-right: 10px;
+                }
+                .ran-box {
+                    padding-right: 39px;
+                    color: var(--gray-500);
+                    font-size: 11px;
+                    strong {
+                        display: block;
+                        font-size: 16px;
+                        color: var(--dark);
+                    }
+                }
+            }
+            .info-menu {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                .b-line {
+                    border-bottom: 1px solid #e0e0e0;
+                    padding-bottom: 16px;
+                }
+                li {
+                    font-size: 15px;
+                    display: flex;
+                    width: 100%;
+                    .fr {
+                        width: 45%;
+                    }
+                    span {
+                        color: var(--gray-500);
+                        justify-self: start;
+                    }
+                }
+            }
+        }
+        .right-card {
+            padding: 20px 22px 0 0;
+            width: 280px;
+            .card {
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                padding: 19px 16px 23px 16px;
+                .top {
+                    display: flex;
+                    column-gap: 11px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #e0e0e0;
+                    span {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+                ul {
+                    padding: 0;
+                    margin-top: 13px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                    margin-bottom: 28px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        line-height: 1;
+                        column-gap: 17px;
+                        width: 100%;
+                        color: var(--gray-500);
+                        span {
+                            width: 15%;
+                        }
+                    }
+                }
+                .btns {
+                    & :first-child {
+                        margin-bottom: 8px;
+                    }
+                    & :nth-child(2){
+                        background-color: white;
+                        color: var(--primary);
+                    }
+                    .custom-btn {
+                        box-shadow: var(--box-shadow);
+                        width: 100%;
+                        border-radius: var(--border-radius);
+                        display: block;
+                        padding: 10.5px 0;
+                    }
+                }
+            }
+            .save-fav{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-size: 16px;
+                color: var(--primary);
+                font-weight: 500;
+                column-gap: 8px;
+                margin-top: 21px;
+            }
+        }
+    }
+}
