@@ -29,6 +29,9 @@
                 border: solid 1px var(--gray-300);
                 margin-bottom: 20px;
             }
+            .controls{
+                display: none;
+            }
             .small-imgs {
                 display: flex;
                 column-gap: 9.15px;
@@ -454,6 +457,7 @@
             .image-side{
                 position: relative;
                 .controls{
+                    display: block;
                     position: absolute;
                     top: 267px;
                     z-index: 1  ;

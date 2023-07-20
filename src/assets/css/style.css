@@ -2115,6 +2115,9 @@ h6 {
   border: solid 1px var(--gray-300);
   margin-bottom: 20px;
 }
+.product-detail .detail-content .image-side .controls {
+  display: none;
+}
 .product-detail .detail-content .image-side .small-imgs {
   display: flex;
   column-gap: 9.15px;
@@ -2525,6 +2528,7 @@ h6 {
     position: relative;
   }
   .product-detail .detail-content .image-side .controls {
+    display: block;
     position: absolute;
     top: 267px;
     z-index: 1;
