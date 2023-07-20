@@ -18,10 +18,14 @@ import v from '../../assets/images/v.svg';
 import YouMayLike from "../reusable/YouMayLike";
 import relatedPoructs from '../../assets/const/relatedProducts';
 
+import img from '../../assets/images/img.svg';
+
 import t2 from '../../assets/images/t2.svg';
 import t3 from '../../assets/images/t3.svg';
 import t4 from '../../assets/images/t4.svg';
 import t5 from '../../assets/images/t5.svg';
+
+import controls from '../../assets/images/controls.svg';
 
 const ratings = [fullStar, fullStar, fullStar, fullStar, star];
 
@@ -32,8 +36,8 @@ const ProductDetail = () => {
   const relatedproduct = relatedPoructs.map(item => {
     return (
       <div key={item.id} className="custom">
-        <img src={item.img} alt="" />
-        <h4>{item.title}</h4>
+        <img src={img} alt="" />
+        <h4>Xiaomi Redmi 8 <br /> Original</h4>
         <p>{item.price}</p>
       </div>
     )
@@ -54,6 +58,7 @@ const ProductDetail = () => {
       <section className="detail-content">
         <div className="image-side">
           <img src={detailMainImage} className="main-img" alt="" />
+          <img src={controls} className="controls" alt="" />
           <div className="small-imgs">
             <img src={detailMainImage} className="active" alt="" />
             <img src={t2} alt="" />
@@ -112,11 +117,11 @@ const ProductDetail = () => {
           <span className="save-fav"><img src={heart} alt="" /> Save for later</span>
         </div>
       </section>
-
+{/* 
       <section className="second-section">
         <div className="cus-col-xl">
           <div className="btns">
-            <button>Description</button>
+            <button className="active">Description</button>
             <button>Reviews</button>
             <button>Shipping</button>
             <button>About company</button>
@@ -125,11 +130,11 @@ const ProductDetail = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
             <ul className="cus-table">
-              <li><span>Model</span><span>#8786867</span></li>
-              <li><span>Style</span><span>Classic style</span></li>
-              <li><span>Certificate</span><span>ISO-898921212</span></li>
-              <li><span>Size</span><span>34mm x 450mm x 19mm</span></li>
-              <li><span>Memory</span><span>36GB RAM</span></li>
+              <li><span className="fr-col">Model</span><span className="sec-col">#8786867</span></li>
+              <li><span className="fr-col">Style</span><span className="sec-col">Classic style</span></li>
+              <li><span className="fr-col">Certificate</span><span className="sec-col">ISO-898921212</span></li>
+              <li><span className="fr-col">Size</span><span className="sec-col">34mm x 450mm x 19mm</span></li>
+              <li><span className="fr-col">Memory</span><span className="sec-col">36GB RAM</span></li>
             </ul>
             <ul className="footer-menu">
               <li><img src={v} alt="" />Some great feature name here</li>
@@ -139,22 +144,25 @@ const ProductDetail = () => {
             </ul>
           </div>
         </div>
-        <div className="cus-col-sm">
-          <YouMayLike />
-        </div>
+        <YouMayLike />
       </section>
 
       <section className="related-products">
-        {relatedproduct}
+        <h2>Related products</h2>
+        <div className="cards">
+          {relatedproduct}
+        </div>
       </section>
 
       <section className="blue-section">
-        <div>
+        <div className="first">
           <h1>Super discount on more than 100 USD</h1>
           <p>Have you ever finally just write dummy info</p>
         </div>
-        <button>Shop now</button>
-      </section>
+        <div className="second">
+          <button>Shop now</button>
+        </div>
+      </section> */}
     </div>
   )
 }

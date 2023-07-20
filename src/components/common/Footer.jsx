@@ -6,8 +6,10 @@ import logo from '../../assets/images/logo.svg';
 import footerList from '../../assets/const/footerList';
 import us from '../../assets/images/us.svg';
 import downIcon from '../../assets/images/down.svg';
+import { useParams } from 'react-router-dom';
 
 const Footer = () => {
+  const { productId } = useParams();
 
   const listItems = footerList.map(item => {
     return (
@@ -20,17 +22,22 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="subscribe-section">
-        <h1>Subscribe on our newsletter</h1>
-        <p>Get daily news on upcoming offers from many suppliers all over the world</p>
-        <form >
-          <div className='input'>
-            <img src={email} alt="" className='email-icon' />
-            <input type="email" placeholder='Email' />
+
+      {
+        !productId && (
+          <div className="subscribe-section">
+            <h1>Subscribe on our newsletter</h1>
+            <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+            <form >
+              <div className='input'>
+                <img src={email} alt="" className='email-icon' />
+                <input type="email" placeholder='Email' />
+              </div>
+              <button type='button' className='custom-btn'>Subscribe</button>
+            </form>
           </div>
-          <button type='button' className='custom-btn'>Subscribe</button>
-        </form>
-      </div>
+        )
+      }
 
       <section className='footer-card'>
         <div className="brand-card">

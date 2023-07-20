@@ -20,7 +20,6 @@ const MobileNavbar = () => {
     const location = useLocation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const sidebarRef = useRef();
-    console.log(isSidebarOpen);
 
     useEffect(() => {
         let handler = (event) => {
