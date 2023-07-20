@@ -117,7 +117,7 @@ const ProductDetail = () => {
           <span className="save-fav"><img src={heart} alt="" /> Save for later</span>
         </div>
       </section>
-{/* 
+
       <section className="second-section">
         <div className="cus-col-xl">
           <div className="btns">
@@ -162,7 +162,7 @@ const ProductDetail = () => {
         <div className="second">
           <button>Shop now</button>
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }
