@@ -61,7 +61,7 @@ const MobileNavbar = () => {
                                 <Link onClick={()=>setIsSidebarOpen(false)} to="/"><img src={home} alt="" />Home</Link>
                                 <Link onClick={()=>setIsSidebarOpen(false)} to="categories"><img src={catg} alt="" />Categories</Link>
                                 <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={hrt} alt="" />Favorites</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={myorders} alt="" />My orders</Link>
+                                <Link onClick={()=>setIsSidebarOpen(false)} to="mycart"><img src={myorders} alt="" />My orders</Link>
                             </div>
                             <div className="line"></div>
                             <div className="second-menu sidebar-menu">

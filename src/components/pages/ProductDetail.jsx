@@ -26,6 +26,7 @@ import t4 from '../../assets/images/t4.svg';
 import t5 from '../../assets/images/t5.svg';
 
 import controls from '../../assets/images/controls.svg';
+import BlueSecion from "../reusable/BlueSecion";
 
 const ratings = [fullStar, fullStar, fullStar, fullStar, star];
 
@@ -154,15 +155,7 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      <section className="blue-section">
-        <div className="first">
-          <h1>Super discount on more than 100 USD</h1>
-          <p>Have you ever finally just write dummy info</p>
-        </div>
-        <div className="second">
-          <button>Shop now</button>
-        </div>
-      </section>
+      <BlueSecion/>
     </div>
   )
 }

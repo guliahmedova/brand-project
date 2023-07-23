@@ -6,10 +6,11 @@ import logo from '../../assets/images/logo.svg';
 import footerList from '../../assets/const/footerList';
 import us from '../../assets/images/us.svg';
 import downIcon from '../../assets/images/down.svg';
-import { useParams } from 'react-router-dom';
+import { useParams , useLocation} from 'react-router-dom';
 
 const Footer = () => {
   const { productId } = useParams();
+  const location = useLocation();
 
   const listItems = footerList.map(item => {
     return (
@@ -24,7 +25,7 @@ const Footer = () => {
     <footer className="footer">
 
       {
-        !productId && (
+        !productId && location.pathname !== "/mycart" && (
           <div className="subscribe-section">
             <h1>Subscribe on our newsletter</h1>
             <p>Get daily news on upcoming offers from many suppliers all over the world</p>
