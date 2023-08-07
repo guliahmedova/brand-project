@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import categories from "../../assets/const/categories";
 import right from '../../assets/images/right.svg';
 import { Link } from "react-router-dom";
@@ -27,12 +28,23 @@ import t5 from '../../assets/images/t5.svg';
 
 import controls from '../../assets/images/controls.svg';
 import BlueSecion from "../reusable/BlueSecion";
+import MobileProductDetail from "./MobileProductDetail";
 
 const ratings = [fullStar, fullStar, fullStar, fullStar, star];
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const getProduct = categories.find(item => item.id === productId);
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [width]);
 
   const relatedproduct = relatedPoructs.map(item => {
     return (
@@ -45,81 +57,85 @@ const ProductDetail = () => {
   });
 
   return (
-    <div className="product-detail">
-      <section className="categories-top-links">
-        <Link>Home</Link>
-        <img src={right} alt="" />
-        <Link>Clothings</Link>
-        <img src={right} alt="" />
-        <Link>Men’s wear</Link>
-        <img src={right} alt="" />
-        <Link>Summer clothing</Link>
-      </section>
+    <>
+      {
+        width <= 480 ? <MobileProductDetail /> :
+          (
+            <div className="product-detail">
+              <section className="categories-top-links">
+                <Link>Home</Link>
+                <img src={right} alt="" />
+                <Link>Clothings</Link>
+                <img src={right} alt="" />
+                <Link>Men’s wear</Link>
+                <img src={right} alt="" />
+                <Link>Summer clothing</Link>
+              </section>
 
-      <section className="detail-content">
-        <div className="image-side">
-          <img src={detailMainImage} className="main-img" alt="" />
-          <img src={controls} className="controls" alt="" />
-          <div className="small-imgs">
-            <img src={detailMainImage} className="active" alt="" />
-            <img src={t2} alt="" />
-            <img src={t3} alt="" />
-            <img src={t4} alt="" />
-            <img src={t5} alt="" />
-            <img src={detailMainImage} alt="" />
-          </div>
-        </div>
+              <section className="detail-content">
+                <div className="image-side">
+                  <img src={detailMainImage} className="main-img" alt="" />
+                  <img src={controls} className="controls" alt="" />
+                  <div className="small-imgs">
+                    <img src={detailMainImage} className="active" alt="" />
+                    <img src={t2} alt="" />
+                    <img src={t3} alt="" />
+                    <img src={t4} alt="" />
+                    <img src={t5} alt="" />
+                    <img src={detailMainImage} alt="" />
+                  </div>
+                </div>
 
-        <div className="middle-part">
-          <span className="stock"><img src={vertify} alt="" />In stock</span>
-          <h1 className="product-title">Mens Long Sleeve T-shirt Cotton Base <br /> Layer Slim Muscle</h1>
-          <div className="rating">
-            <span className="stars">{ratings.map((r, index) => <img src={r} className="star" key={index} alt='' />)} <span className="star-text">{getProduct.rating}</span></span>
-            <img className="dot" src={dot} alt="" />
-            <span className="reviews"><img src={reviews} alt="" /><span>32 reviews</span></span>
-            <img className="dot" src={dot} alt="" />
-            <span className="sold"><img src={sold} alt="" /><span>154 sold</span></span>
-          </div>
-          <div className="price-range">
-            <span className="ran-box first"><strong className="text-danger">$98.00</strong>50-100 pcs</span>
-            <span className="ran-box first"><strong>$90.00</strong>100-700 pcs</span>
-            <span className="ran-box"><strong>$78.00</strong>700+ pcs</span>
-          </div>
-          <ul className="info-menu">
-            <li className="b-line"><span className="fr">Price:</span>Negotiable</li>
-            <li><span className="fr">Type:</span>Classic  shoes</li>
-            <li><span className="fr">Material:</span>Plastic material</li>
-            <li className="b-line"><span className="fr">Design:</span>Modern nice</li>
-            <li><span className="fr">Customization:</span>Customized logo and <br /> design custom packages</li>
-            <li><span className="fr">Protection:</span>Refund Policy</li>
-            <li className="b-line"><span className="fr">Warranty:</span>2 years full warranty </li>
-          </ul>
-        </div>
+                <div className="middle-part">
+                  <span className="stock"><img src={vertify} alt="" />In stock</span>
+                  <h1 className="product-title">Mens Long Sleeve T-shirt Cotton Base <br /> Layer Slim Muscle</h1>
+                  <div className="rating">
+                    <span className="stars">{ratings.map((r, index) => <img src={r} className="star" key={index} alt='' />)} <span className="star-text">{getProduct.rating}</span></span>
+                    <img className="dot" src={dot} alt="" />
+                    <span className="reviews"><img src={reviews} alt="" /><span>32 reviews</span></span>
+                    <img className="dot" src={dot} alt="" />
+                    <span className="sold"><img src={sold} alt="" /><span>154 sold</span></span>
+                  </div>
+                  <div className="price-range">
+                    <span className="ran-box first"><strong className="text-danger">$98.00</strong>50-100 pcs</span>
+                    <span className="ran-box first"><strong>$90.00</strong>100-700 pcs</span>
+                    <span className="ran-box"><strong>$78.00</strong>700+ pcs</span>
+                  </div>
+                  <ul className="info-menu">
+                    <li className="b-line"><span className="fr">Price:</span>Negotiable</li>
+                    <li><span className="fr">Type:</span>Classic  shoes</li>
+                    <li><span className="fr">Material:</span>Plastic material</li>
+                    <li className="b-line"><span className="fr">Design:</span>Modern nice</li>
+                    <li><span className="fr">Customization:</span>Customized logo and <br /> design custom packages</li>
+                    <li><span className="fr">Protection:</span>Refund Policy</li>
+                    <li className="b-line"><span className="fr">Warranty:</span>2 years full warranty </li>
+                  </ul>
+                </div>
 
-        <div className="right-card">
-          <div className="card">
-            <div className="top">
-              <img src={avatar} alt="" />
-              <span>
-                Supplier <br />
-                Guanjoi Trading LLC
-              </span>
-            </div>
-            <ul>
-              <li><span><img src={german} alt="" /></span>Germany, Berlin</li>
-              <li><span><img src={vertifp} alt="" /></span>Verified Seller</li>
-              <li><span><img src={earth} alt="" /></span>Worldwide shipping</li>
-            </ul>
-            <div className="btns">
-              <button className="custom-btn">Send inquiry</button>
-              <button className="custom-btn">Seller’s profile</button>
-            </div>
-          </div>
-          <span className="save-fav"><img src={heart} alt="" /> Save for later</span>
-        </div>
-      </section>
+                <div className="right-card">
+                  <div className="card">
+                    <div className="top">
+                      <img src={avatar} alt="" />
+                      <span>
+                        Supplier <br />
+                        Guanjoi Trading LLC
+                      </span>
+                    </div>
+                    <ul>
+                      <li><span><img src={german} alt="" /></span>Germany, Berlin</li>
+                      <li><span><img src={vertifp} alt="" /></span>Verified Seller</li>
+                      <li><span><img src={earth} alt="" /></span>Worldwide shipping</li>
+                    </ul>
+                    <div className="btns">
+                      <button className="custom-btn">Send inquiry</button>
+                      <button className="custom-btn">Seller’s profile</button>
+                    </div>
+                  </div>
+                  <span className="save-fav"><img src={heart} alt="" /> Save for later</span>
+                </div>
+              </section>
 
-      <section className="second-section">
+              {/* <section className="second-section">
         <div className="cus-col-xl">
           <div className="btns">
             <button className="active">Description</button>
@@ -153,10 +169,13 @@ const ProductDetail = () => {
         <div className="cards">
           {relatedproduct}
         </div>
-      </section>
+      </section> */}
 
-      <BlueSecion/>
-    </div>
+              {/* <BlueSecion/> */}
+            </div>
+          )
+      }
+    </>
   )
 }
 

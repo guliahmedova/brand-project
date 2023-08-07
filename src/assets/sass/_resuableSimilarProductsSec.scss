@@ -1,0 +1,43 @@
+.similar-pr-sec {
+    box-shadow: none;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    .title {
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        column-gap: 8px;
+    }
+    .card {
+        flex: 0 0 150px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        .main-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            padding: 10.88px 9px;
+        }
+        .body {
+            padding: 10px;
+            .price {
+                color: var(--dark);
+                font-weight: 600;
+                font-size: 16px;
+            }
+            .pr-title {
+                color: var(--gray-500);
+                font-size: 15px;
+            }
+        }
+    }
+}

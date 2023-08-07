@@ -45,7 +45,7 @@ const MobileNavbar = () => {
             document.body.style.overflow = 'unset';
         }
     }, [isSidebarOpen])
-    
+
 
     return (
         <div className='mobile-navbar'>
@@ -58,22 +58,22 @@ const MobileNavbar = () => {
                                 <span className='text'>Sign in | Register</span>
                             </div>
                             <div className="first-menu sidebar-menu">
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="/"><img src={home} alt="" />Home</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="categories"><img src={catg} alt="" />Categories</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={hrt} alt="" />Favorites</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="mycart"><img src={myorders} alt="" />My orders</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="/"><img src={home} alt="" />Home</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="categories"><img src={catg} alt="" />Categories</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound"><img src={hrt} alt="" />Favorites</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="mycart"><img src={myorders} alt="" />My orders</Link>
                             </div>
                             <div className="line"></div>
                             <div className="second-menu sidebar-menu">
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={e} alt="" />English | USD</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={contactus} alt="" />Contact us</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound"><img src={about} alt="" />About</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound"><img src={e} alt="" />English | USD</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound"><img src={contactus} alt="" />Contact us</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound"><img src={about} alt="" />About</Link>
                             </div>
                             <div className="line"></div>
                             <div className='third-menu sidebar-menu'>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">User agreement</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">Partnership</Link>
-                                <Link onClick={()=>setIsSidebarOpen(false)} to="notfound">Partnership</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound">User agreement</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound">Partnership</Link>
+                                <Link onClick={() => setIsSidebarOpen(false)} to="notfound">Partnership</Link>
                             </div>
                         </div>
                         <div className="blur"></div>
@@ -97,8 +97,8 @@ const MobileNavbar = () => {
                     }
                 </div>
                 <div className="right-part top-same-style">
-                    <img src={shoppingCart} alt="" />
-                    <img src={mobileprofile} alt="" />
+                    <Link to="mycart"> <img src={shoppingCart} alt="" /></Link>
+                    <Link to="notfound"><img src={mobileprofile} alt="" /></Link>
                 </div>
             </div>
             <form className='search-bar'>
